@@ -1,16 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; 
 
-void main() {
-  runApp(const MyApp());
-}
+import 'package:scoped_model/scoped_model.dart'; 
+import 'ExpenseListModel.dart'; 
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+import 'Expense.dart'; 
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-   
+void main()
