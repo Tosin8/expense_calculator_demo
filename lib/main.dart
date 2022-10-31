@@ -115,7 +115,7 @@ class MyHomePage extends StatelessWidget {
 }
 
 class FormPage extends StatefulWidget {
-  const FormPage({Key? key, this.id, this.expenses}) : super(key: key);
+  const FormPage({Key? key, required this.id, required this.expenses}) : super(key: key);
 
   final int id;
   final ExpenseListModel expenses;
@@ -125,7 +125,7 @@ class FormPage extends StatefulWidget {
 }
 
 class _FormPageState extends State<FormPage> {
-  _FormPageState({Key? key, this.id, this.expenses});
+   _FormPageState({required this.id, required this.expenses});
 
   final int id;
   final ExpenseListModel expenses;
@@ -140,8 +140,8 @@ class _FormPageState extends State<FormPage> {
   void _submit() {
     final form = formKey.currentState;
 
-    if (form.validate()) {
-      form.save();
+    if (form?.validate()) {
+      form?.save();
 
       if (id == 0) {
         expenses.add(Expense(0, _amount, _date, _category));
